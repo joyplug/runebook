@@ -23,7 +23,7 @@ email: ejjoo7994@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Themed by ejjoo
 baseurl: "/runebook" # the subpath of your site, e.g. /blog
-url: "http://joyplug.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://joyplug.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: joyplug
 highlighter: rouge
 svg:
