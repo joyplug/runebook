@@ -1,6 +1,6 @@
 <div class="sidebar-item sidebar-header">
 	<div class='sidebar-brand'>
-		<a href="/runebook/about/">{{ site.title }}</a>
+		<a href="{{ site.baseurl }}/about/">{{ site.title }}</a>
 	</div>
 	<p class="lead">{{ site.description }}</p>
 	{%- if social.github -%}
@@ -22,7 +22,7 @@
 	    {% if node.title != null %}
 	      {% if node.layout == "page" %}
 	        <li>
-	        	<a class="nav-item" href="/runebook{{ node.url }}">
+	        	<a class="nav-item" href="{{ site.baseurl }}{{ node.url }}">
 	            	{{ node.title }}
 	            </a>
 	        </li>
@@ -37,7 +37,7 @@
 			<li class="nav-title">Categories</li>
 	    {% for category in site.categories %}
 	    <li>
-	    	<a class="nav-item" href="/runebook/{{ site.category_dir }}#{{ category | first }}">
+	    	<a class="nav-item" href="{{ site.baseurl }}/{{ site.category_dir }}#{{ category | first }}">
 				<span class="name">{{ category | first }}</span>
 				<span class="badge">{{ category | last | size }}</span>
 	    	</a>
