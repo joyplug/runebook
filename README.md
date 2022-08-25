@@ -1,8 +1,4 @@
----
-layout: page
-title: About
-permalink: /about/
----
+Runebook
 
 ## Theme Monos
 > Simple and lightweight theme for Jekyll
