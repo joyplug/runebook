@@ -7,7 +7,7 @@ category: mac
 
 ## rosetta 다운로드
 ```bash
-softwareupdate –install-rosetta
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 ```
 
 
@@ -27,7 +27,7 @@ node         14.17.6   8beedd044dbc   2 weeks ago   891MB
 ```
 
 ```bash
-docker run -d -it –name node_14_17_6 -v /Users/joyplug/Documents/Project/docker/node_14_17_6:/app node:14.17.6
+docker run -d -it --name node_14_17_6 -v /Users/joyplug/Documents/Project/docker/node_14_17_6:/app node:14.17.6
 docker ps -a
 ```
 
@@ -56,4 +56,14 @@ docker ps -a
 ```bash
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                       PORTS     NAMES
 b5c97eb3507b   node:14.17.6   "docker-entrypoint.s…"   11 minutes ago   Exited (137) 4 seconds ago             node_14_17_6
+```
+
+## 컨테이너 삭제 및 커밋버전 실행
+```bash
+docker rm node_14_17_6
+docker ps -a
+docker images
+
+docker run -d -it --name node_18_12_1_001 -v /Users/joyplug/Desktop/Project/docker/node_18_12_1:/app node_18_12_1:001
+docker exec -it node_18_12_1_001 /bin/bash
 ```
